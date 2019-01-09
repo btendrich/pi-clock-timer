@@ -7,6 +7,8 @@ service ntp restart
 
 while :
 do
+	sleep 5
+	service ntp restart
 	/home/pi/pi-clock-timer/00-run.rb
 done
 
