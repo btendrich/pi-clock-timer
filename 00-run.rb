@@ -34,6 +34,8 @@ when :timer
 else
   $logger.info "Running default option"
   loop do
+    `cp /home/pi/pi-clock-timer/pi-graphical-status /tmp/running`
+    `/tmp/running`
     sleep 1
   end
 end
