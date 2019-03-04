@@ -5,8 +5,10 @@ require 'logger'
 $logger = Logger.new(STDOUT)
 
 CONFIGS = {
-  'B8:27:EB:03:6D:B9' => :clock,
-  'B8:27:EB:F0:D0:2D' => :timer,
+  'B8:27:EB:03:6D:B9' => :clock, # ath clock
+  'B8:27:EB:F0:D0:2D' => :timer, # ath timer
+  'B8:27:EB:B7:79:D1' => :clock, # dgh clock
+  'B8:27:EB:18:4F:EF' => :timer, # dgh timer
 }
 
 $logger.info "Starting up..."
