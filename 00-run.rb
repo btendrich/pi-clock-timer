@@ -7,7 +7,7 @@ $logger = Logger.new(STDOUT)
 CONFIGS = {
   'B8:27:EB:03:6D:B9' => :clock, # ath clock
   'B8:27:EB:F0:D0:2D' => :timer, # ath timer
-  'B8:27:EB:B7:79:D1' => :clock, # dgh clock
+  'B8:27:EB:B7:79:D1' => :dgh_clock, # dgh clock
   'B8:27:EB:18:4F:EF' => :timer, # dgh timer
 }
 
@@ -23,6 +23,13 @@ when :clock
   $logger.info "Running option 'clock'"
   loop do
     `cp /home/pi/pi-clock-timer/clock_720 /tmp/running`
+    `/tmp/running`
+    sleep 1
+  end
+when :dgh_clock
+  $logger.info "Running option 'clock'"
+  loop do
+    `cp /home/pi/pi-clock-timer/dgh-clock /tmp/running`
     `/tmp/running`
     sleep 1
   end
