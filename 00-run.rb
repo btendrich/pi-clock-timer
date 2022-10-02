@@ -10,7 +10,7 @@ CONFIGS = {
   'B8:27:EB:B7:79:D1' => :dgh_clock, # dgh clock
   'B8:27:EB:18:4F:EF' => :timer, # dgh timer
   'B8:27:EB:D6:32:FA' => :dgh_clock,
-  'B8:27:EB:E9:95:B8' => :timer,
+  'B8:27:EB:E9:95:B8' => :dgh_clock,
 }
 
 $logger.info "Starting up..."
